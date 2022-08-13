@@ -3,6 +3,12 @@ import { CreateUserDto, UpdateUserDto } from "@domain/dto/user.dto";
 import { User } from "@domain/models/user";
 import { IUserRepository } from "@domain/repositories/user.repository";
 
+const userData: User = {
+  id: "user_id_1",
+  firstName: "first name 1",
+  lastName: "last name 1",
+};
+const userDatas: User[] = [];
 const newUserMock = async (): Promise<IUserRepository> => {
   const create = async (user: CreateUserDto) => {
     return false;
